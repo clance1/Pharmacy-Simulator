@@ -1,0 +1,21 @@
+CMP = g++
+CLASS = bottleDate
+CLASS2 = Bottle
+MAIN = testBottleFinal
+EXEC = testBottleFinal
+
+$(EXEC): $(CLASS).o $(CLASS2).o  $(MAIN).o
+	$(CMP) $(CLASS2).o $(CLASS).o $(MAIN).o -o $(EXEC) -std=gnu++11
+
+$(CLASS).o: $(CLASS).cpp $(CLASS).h
+	$(CMP) -c $(CLASS).cpp -o $(CLASS).o -std=gnu++11
+
+$(CLASS2).o: $(CLASS2).cpp $(CLASS2).h  
+	$(CMP) -c $(CLASS2).cpp -o $(CLASS2).o -std=gnu++11
+
+$(MAIN).o: $(MAIN).cpp $(CLASS).h $(CLASS2).h
+	$(CMP) -c $(MAIN).cpp -o $(MAIN).o -std=gnu++11
+
+clean:
+	rm *.o
+	rm $(EXEC)

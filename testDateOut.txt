@@ -1,0 +1,12 @@
+Enter the initial date (Month, Day, Year):
+6 20 2019
+Enter the check date that is before the initial expiration (Month, Day, Year):
+6 10 2018
+Enter the check date that is the same as the initial expiration (Month, Day, Year):
+6 20 2019
+Enter the expiration date that is after the initial expiration (Month, Day, Year):
+6 23 2019
+The check date 2018 JUN 10 is before the initial date 2019 JUN 20
+The check date 2019 JUN 20 is the same day or after the initial date 2019 JUN 20
+The check date 2019 JUN 23 is the same day or after the initial date 2019 JUN 20
+
